@@ -75,7 +75,8 @@
       return;
     }
 
-    status.textContent = " " + describeRange(data.range) + ".";
+    // Add describeRange(data.range) to this response to explain date range
+    // status.textContent = "Don't miss these upcoming UC Santa Cruz events.";
 
     renderHero(events[0]);
     events.slice(1).forEach(function (event) {
