@@ -1,6 +1,6 @@
 # UCSC upcoming events
 
-Popular upcoming events at UC Santa Cruz, ranked by Plausible Analytics traffic. The page shows one hero plus rows of additional events. The page is built for a display screen, so it has no links or buttons. Each event carries a QR code that viewers can scan to open the event page.
+Popular upcoming events at UC Santa Cruz, ranked by Plausible Analytics traffic. Each event carries a QR code that viewers can scan to open the event page.
 
 ## How it works
 
