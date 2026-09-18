@@ -1,0 +1,6 @@
+node_modules/
+deno.lock
+.claude/
+.netlify/
+.env
+.DS_Store

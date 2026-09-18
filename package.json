@@ -1,0 +1,14 @@
+{
+  "name": "ucsc-upcoming-events",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Upcoming UC Santa Cruz events, ranked by Plausible Analytics traffic. Static page plus a Netlify Function.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx netlify-cli dev",
+    "deploy": "npx netlify-cli deploy --prod"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
