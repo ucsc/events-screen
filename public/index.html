@@ -28,13 +28,15 @@
           </g>
         </svg>
       </div>
-      <p class="site-url">events.ucsc.edu</p>
+      <div class="site-title">
+        <h1>Upcoming events</h1>
+        <p class="site-url">events.ucsc.edu</p>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <div class="wrap page-title">
-      <h1>Upcoming events</h1>
       <p id="status" aria-live="polite">Loading the most-viewed events from events.ucsc.edu…</p>
     </div>
 
@@ -72,7 +74,6 @@
 
   <template id="event-card">
     <li class="card">
-      <div class="card-img"><img alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-text">
           <h3></h3>
@@ -83,6 +84,7 @@
           <span class="qr-code" aria-hidden="true"></span>
         </div>
       </div>
+      <div class="card-img"><img alt="" loading="lazy"></div>
     </li>
   </template>
 
