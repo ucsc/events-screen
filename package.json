@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "npx netlify-cli dev",
-    "deploy": "npx netlify-cli deploy --prod"
+    "deploy": "npx netlify-cli deploy --prod",
+    "test": "node --test 'test/*.test.mjs'",
+    "test:live": "LIVE_TESTS=1 node --test 'test/*.test.mjs'"
   },
   "engines": {
     "node": ">=18"
