@@ -55,7 +55,7 @@ body {
 
 img { display: block; max-width: 100%; height: auto; }
 h1, h2, h3 { margin: 0; font-weight: 700; text-wrap: balance; }
-h1 { font-size: clamp(1.202rem, 1.2rem + 2vw, 2.088rem); line-height: 1.1; }
+h1 { font-size: clamp(1.202rem, 1.2rem + 2vw, 1.7rem); line-height: 1.1; font-weight: 500; }
 h2 { font-size: clamp(1.8rem, 1.1rem + 1.6vw, 3.074rem); line-height: 1.2; }
 h3 { font-size: 1.2rem; line-height: 1.4; }
 
@@ -79,8 +79,8 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
   align-items: center;
   justify-content: space-between;
   gap: 1.802rem;
-  padding-top: .66rem;
-  padding-bottom: .66rem;
+  padding-top: .86rem;
+  padding-bottom: .86rem;
 }
 
 .logo-slot {
@@ -98,11 +98,10 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
 .site-title h1 { color: #fff; }
 
 .site-url {
-  margin: .25rem 0 0;
+  margin: .02rem 0 0;
   color: #fff;
-  font-weight: 600;
-  letter-spacing: .04em;
-  font-size: 1.33rem;
+  font-weight: 400;
+  font-size: 1.15rem;
 }
 
 /* Page title ------------------------------------------------------------- */
@@ -184,14 +183,15 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
   gap: 1rem;
   margin-top: auto;
   padding-top: .889rem;
+  justify-content: flex-end;
 }
 
 .card .qr { margin-top: 0; padding-top: 0; }
 
 .qr-code {
   flex: 0 0 auto;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   padding: .25rem;        /* quiet zone so scanners find the edges */
   background: #fff;       /* always white behind the modules, even in dark mode */
 }
@@ -232,11 +232,12 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
 
 .site-footer { background: var(--blue); color: #fff; font-size: .889rem; }
 .site-footer .wrap {
-  padding-top: 1.802rem;
-  padding-bottom: 1.802rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: .889rem 1.802rem;
 }
 .site-footer p { margin: 0; }
@@ -290,18 +291,18 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
      .card-body is flattened so its children sit on the card's own grid. */
   .card {
     display: grid;
-    grid-template-columns: 40% minmax(0, 1fr);
+    grid-template-columns: 54`% minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr) auto;
     gap: 1rem 1.25rem;
     padding: 1.25rem;
     min-height: 0;
     overflow: hidden;
   }
-  .card-img { grid-column: 1; grid-row: 1; aspect-ratio: auto; min-height: 0; }
+  .card-img { grid-column: 2; grid-row: 1; aspect-ratio: auto; min-height: 0; }
   .card-img img { object-position: top; }
   .card-body { display: contents; }
-  .card-text { grid-column: 2; grid-row: 1 / -1; min-height: 0; overflow: hidden; }
-  .card .qr { grid-column: 1; grid-row: 2; }
+  .card-text { grid-column: 1; grid-row: 1 / -1; min-height: 0; overflow: hidden; }
+  .card .qr { grid-column: 2; grid-row: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {
