@@ -5,9 +5,9 @@ Popular upcoming events at UC Santa Cruz, ranked by Plausible Analytics traffic.
 ## How it works
 
 - `public/` is the static site: `index.html`, `css/styles.css`, `js/app.js`. Each card carries a QR code for its event page, generated in the browser by `js/vendor/qrcode.min.js` (qrcode-generator 1.4.4, MIT license). 
-- `netlify/functions/upcoming-events.mjs` is the serverless function. It collapses recurring-event paths like `/event/slug/2026-09-19/` into one event, drops events that have since been unpublished, and caches the result on Netlify's CDN for 10 minutes.
+- `netlify/functions/upcoming-events.mjs` is the serverless function. It collapses recurring-event paths like `/event/slug/2026-09-19/` into one event, drops events that have since been unpublished, and caches the result on Netlify's CDN for an hour.
 - Only upcoming events are shown: an event is kept if it starts today or later, or if it started earlier and runs through today. "Today" is computed in `EVENTS_TIMEZONE` (default `America/Los_Angeles`). For a recurring event whose most-viewed date has passed, the function falls back to the series' next occurrence.
-- The page covers one fixed time period, set by `UPCOMING_EVENTS_RANGE`, and refreshes itself every 10 minutes. If a refresh fails, the error is shown on screen and the page tries again after one minute.
+- The page covers one fixed time period, set by `UPCOMING_EVENTS_RANGE`, and refreshes itself once an hour after a successful load. If a refresh fails, the error is shown on screen and the page tries again after one minute.
 
 ## Setup
 

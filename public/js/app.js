@@ -11,7 +11,7 @@
   var QR_REFERENCE = "?utm_medium=public_screen&utm_source=BookshopSC";
 
   var LIMIT = 9;                 // 1 hero + 8 cards = two full rows of four
-  var REFRESH_MS = 10 * 60 * 1000;
+  var REFRESH_MS = 60 * 60 * 1000; // after a good load, wait an hour before asking again
   var RETRY_MS = 60 * 1000;      // there is nothing to click on a display screen, so retry sooner after an error
   var refreshTimer = null;
 

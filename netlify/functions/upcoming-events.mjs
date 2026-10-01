@@ -52,10 +52,11 @@ export default async function handler(request) {
       { site: SITE_ID, range, today, generatedAt: new Date().toISOString(), events },
       200,
       {
-        // Browser keeps it briefly; Netlify's CDN keeps it longer and revalidates in the background,
-        // so Plausible and WordPress are not hit on every page load.
-        "Cache-Control": "public, max-age=120",
-        "Netlify-CDN-Cache-Control": "public, durable, max-age=600, stale-while-revalidate=3600",
+        // The page refreshes hourly after a good load. Browsers keep the answer for a few minutes;
+        // Netlify's CDN keeps it for an hour and revalidates in the background for another hour,
+        // so Plausible and WordPress see at most about one round of requests per hour.
+        "Cache-Control": "public, max-age=300",
+        "Netlify-CDN-Cache-Control": "public, durable, max-age=3600, stale-while-revalidate=3600",
         "Netlify-Vary": "query=limit",
       }
     );
